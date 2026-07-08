@@ -4,10 +4,73 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lab 1_4: ฟอร์มสมัครสมาชิก</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, sans-serif;
+            background: linear-gradient(135deg, #fdf2f8, #eef2ff);
+            margin: 0;
+            padding: 40px 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+        form {
+            background: white;
+            padding: 28px;
+            border-radius: 16px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+            width: 100%;
+            max-width: 420px;
+        }
+        h2 {
+            text-align: center;
+            color: #7c3aed;
+            margin-bottom: 20px;
+        }
+        .form-group {
+            margin-bottom: 14px;
+        }
+        label {
+            display: block;
+            margin-bottom: 6px;
+            color: #4b5563;
+            font-size: 14px;
+        }
+        input {
+            width: 100%;
+            padding: 10px 12px;
+            border: 1px solid #d1d5db;
+            border-radius: 10px;
+            box-sizing: border-box;
+            transition: 0.2s ease;
+        }
+        input:focus {
+            outline: none;
+            border-color: #8b5cf6;
+            box-shadow: 0 0 0 3px rgba(139, 92, 246, 0.15);
+        }
+        button {
+            width: 100%;
+            padding: 12px;
+            border: none;
+            border-radius: 10px;
+            background: linear-gradient(90deg, #8b5cf6, #ec4899);
+            color: white;
+            font-weight: bold;
+            cursor: pointer;
+            margin-top: 8px;
+        }
+        button:hover {
+            transform: translateY(-1px);
+            box-shadow: 0 6px 14px rgba(139, 92, 246, 0.2);
+        }
+    </style>
 </head>
 <body>
 
-    <h2>ฟอร์มสมัครสมาชิก</h2>
+    <form id="registerForm" onsubmit="return validateForm()">
+        <h2>ฟอร์มสมัครสมาชิก</h2>
     <form id="registerForm" onsubmit="return validateForm()">
         <div class="form-group">
             <label for="name">ชื่อ:</label>
